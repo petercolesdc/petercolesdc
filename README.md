@@ -1,5 +1,5 @@
-# Abernathy.
+# petercolesdc.com
 
-A place to start. Made with Gulp and SCSS.
+I am very badass.
 
-![Excellent](https://media.giphy.com/media/KdILx9YU2IcaA/giphy.gif "Shalom")
+![WTF](https://media.giphy.com/media/NsQpvr72yFWhy/giphy.gif "WTF")
