@@ -25,10 +25,47 @@
 		{% block footer %}
 			{% include 'layouts/footers/default.html' %}
 		{% endblock %}
+		{% include 'layouts/navigation/primary.html' %}
 	</div>
 </body>
 
-<script></script>
+<script>
+
+// Menu
+var hiraku = new Hiraku('.offcanvas-right', {
+  btn: "#offcanvas-btn-right",
+	closeBtn: "#offcanvas-btn-close",
+  //fixedHeader: "#header",
+  direction: "right",
+	width: "320px",
+  breakpoint: -1
+});
+
+// Animation transitions
+$(document).ready(function() {
+  $(".ui__canvas").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out-down-lg',
+    inDuration: 600,
+    outDuration: 400,
+    linkElement: '.animsition_link',
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition_loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition_overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
 {% block script %}
 {% endblock %}
 </html>

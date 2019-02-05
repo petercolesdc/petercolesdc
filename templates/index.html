@@ -1,11 +1,22 @@
-{% set title = '' %}
-{% set section = '' %}
+{% set title = 'Peter Coles. Designer' %}
+{% set section = 'home' %}
 {% extends 'layouts/default.html' %}
 
 {% block precontent %}
 {% endblock %}
 
 {% block content %}
+<section class="section">
+  <div class="masthead">
+    <div class="masthead_caption">
+      <div class="masthead_profile__edge1" style="background-image: url(/assets/img/meface1.png);"></div>
+      <div class="masthead_profile__edge2" style="background-image: url(/assets/img/meface2.png);"></div>
+      <img class="masthead_profile" src="/assets/img/myface.jpg" alt="A picture of Pete's face/">
+      <h1 class="masthead_heading">Hi, I'm Pete.</h1>
+      <p>A designer, front&ndash;end developer &amp; co&ndash;founder of design agency fffunction. I am currently design director at <a href="http://dotscience.com">dotscience</a>.</p>
+    </div>
+  </div>
+</section>
 {% endblock %}
 
 {% block postcontent %}

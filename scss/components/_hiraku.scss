@@ -1,0 +1,93 @@
+
+%hiraku-position {
+  position: absolute;
+  top: 30px;
+  right: 32px;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Open it
+// --------------------------------------
+
+.hiraku-open-btn {
+  @extend %hiraku-position;
+  background: transparent;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  &[aria-expanded="true"] {
+    display: none;
+  }
+}
+
+.hiraku-btn-line {
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 2px;
+  margin: 6px 0;
+  background-color: $cStubbs;
+  border-radius: 1px;
+  transition: .3s all;
+  .hiraku-open-btn:hover & {
+    width: 16px;
+    &:after {
+      width: 10px;
+    }
+    &:before {
+      width: 18px;
+    }
+  }
+}
+
+.hiraku-btn-line:before,
+.hiraku-btn-line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: $cStubbs;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  transition: .3s all;
+}
+
+.hiraku-btn-line:before {
+  top: -6px;
+}
+
+.hiraku-btn-line:after {
+  bottom: -6px;
+}
+
+// Close it
+// --------------------------------------
+
+.hiraku-close-btn {
+  @extend %hiraku-position;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(5px) translateX(-5px);
+  display: none;
+  body.js-hiraku-offcanvas-body-right & {
+    display: block;
+  }
+  .hiraku-btn-line {
+    background-color: transparent;
+  }
+
+  .hiraku-btn-line:before,
+  .hiraku-btn-line:after {
+    width: 22px;
+  }
+
+  .hiraku-btn-line:before {
+    transform: translate(-2px, 6px) rotate(45deg);
+  }
+
+  .hiraku-btn-line:after {
+    transform: translate(-2px, -6px) rotate(-45deg);
+  }
+}

@@ -1,4 +1,32 @@
 
 .header {
-
+  position: relative;
+  background-color: #fff;
+  border-bottom: $strokeWidth solid $cBorder;
+  @include shadowSubtle;
+  padding: 18px 30px;
+  h1 {
+    font-size: rem(24);
+    color: $cHeading;
+    overflow: hidden;
+    font-family: $fontVoice;
+    letter-spacing: -0.025em;
+    font-weight: $fontBold;
+    span {
+      text-indent: -999em;
+      display: block;
+      position: absolute;
+    }
+    svg {
+      width: 12px;
+      height: 22px;
+      position: relative;
+      top: -2px;
+      fill: $cAbernathy;
+      animation-name: anim-colorBlend;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
 }

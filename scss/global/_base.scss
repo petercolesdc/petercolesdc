@@ -10,6 +10,37 @@ body {
   font-family: $fontDefault;
   line-height: $lineheightBase;
   overflow-x: hidden;
+  @include sharp-text;
+  border: 8px solid $cFlood;
+  @include respond-to($vpMenu) {
+    padding-top: 8px;
+    border-top: 0;
+    border-bottom: 0;
+    &:before {
+      top: 0;
+      position: fixed;
+      width: 100%;
+      background-color: $cFlood;
+      content: "";
+      display: block;
+      height: 8px;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+    &:after {
+      bottom: -1px;
+      position: sticky;
+      width: 100%;
+      background-color: $cFlood;
+      content: "";
+      display: block;
+      height: 8px;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+  }
 }
 
 a,
@@ -18,7 +49,7 @@ a,
   cursor: pointer;
   color: $cAction;
   @include link-active-styles {
-    text-decoration-color: darken($cAction, 35%);
+    text-decoration-color: darken($cAction, 5%);
   }
 }
 
@@ -44,7 +75,7 @@ a[href^="tel"] {
 
 // Further sensible resets
 strong, b {
-  font-weight: $fontSemiBold;
+  font-weight: $fontMedium;
 	@include sharp-text;
 }
 

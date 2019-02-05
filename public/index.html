@@ -4,8 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Peter Coles. Designer</title>
 <link rel="stylesheet" href="/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/vendor/animsition.min.js"></script>
+<script src="https://unpkg.com/hiraku@latest/js/hiraku.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
@@ -24,8 +28,14 @@
 <body>
 	<div class="ui__container" id="uicontainer">
 		
-			<header class="header">
-
+			<header class="header" id="header">
+  <h1>P<span>eter </span>C<span>oles </span> <svg aria-hidden="true" class="icon_bolt_svg"><use xlink:href="/assets/icons/renders/sprite.svg#bolt"></use></svg> D<span>esign </span>C<span>hap</span></h1>
+  <ul class="navigation__top">
+    <li><a href="/work/" class="animsition_link">Work.</a></li>
+  </ul>
+  <button class="hiraku-open-btn" id="offcanvas-btn-right" data-toggle-offcanvas="#js-hiraku-offcanvas-1">
+    <span class="hiraku-btn-line"></span>
+  </button>
 </header>
 
 		
@@ -34,6 +44,17 @@
 
 
 			
+<section class="section">
+  <div class="masthead">
+    <div class="masthead_caption">
+      <div class="masthead_profile__edge1" style="background-image: url(/assets/img/meface1.png);"></div>
+      <div class="masthead_profile__edge2" style="background-image: url(/assets/img/meface2.png);"></div>
+      <img class="masthead_profile" src="/assets/img/myface.jpg" alt="A picture of Pete's face/">
+      <h1 class="masthead_heading">Hi, I'm Pete.</h1>
+      <p>A designer, front&ndash;end developer &amp; co&ndash;founder of design agency fffunction. I am currently design director at <a href="http://dotscience.com">dotscience</a>.</p>
+    </div>
+  </div>
+</section>
 
 
 			
@@ -44,10 +65,71 @@
 </footer>
 
 		
+		<nav class="navigation offcanvas-right" id="navigation">
+  <button class="hiraku-close-btn" id="offcanvas-btn-close">
+    <span class="hiraku-btn-line"></span>
+  </button>
+  <ul>
+    <li class="">
+      <a class="animsition-link" href="/cv/">Vitae.</a>
+    </li>
+    <li class="">
+      <a class="animsition-link" href="/about/">About.</a>
+    </li>
+    <li class="">
+      <a class="animsition-link" href="/contact/">Contact.</a>
+    </li>
+    <li class="minor">
+      <a href="https://www.linkedin.com/in/petercolesdc/">
+        <svg class="icon_linkedin_svg"><use xlink:href="/assets/icons/renders/sprite.svg#linkedin"></use></svg>
+      </a>
+      <a href="http://twitter.com/fatelvis">
+        <svg class="icon_twitter_svg"><use xlink:href="/assets/icons/renders/sprite.svg#twitter"></use></svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
 	</div>
 </body>
 
-<script></script>
+<script>
+
+// Menu
+var hiraku = new Hiraku('.offcanvas-right', {
+  btn: "#offcanvas-btn-right",
+	closeBtn: "#offcanvas-btn-close",
+  //fixedHeader: "#header",
+  direction: "right",
+	width: "320px",
+  breakpoint: -1
+});
+
+// Animation transitions
+$(document).ready(function() {
+  $(".ui__canvas").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out-down-lg',
+    inDuration: 600,
+    outDuration: 400,
+    linkElement: '.animsition_link',
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition_loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition_overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
 
 
 </html>

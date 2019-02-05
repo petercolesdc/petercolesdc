@@ -123,7 +123,7 @@ var gulp            = require("gulp")
             reloadDebounce: 500,
             scrollRestoreTechnique: 'cookie'
         });
-        //gulp.watch("public/**/*").on('change', browserSync.reload);
+        gulp.watch("public/**/*").on('change', browserSync.reload);
         gulp.watch("public/**/*");
     });
 

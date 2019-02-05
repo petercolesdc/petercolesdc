@@ -1,1 +1,90 @@
 
+.navigation__top {
+  position: absolute;
+  right: 100px;
+  top: 25px;
+  @include respond-to($vpB) {
+    right: 120px;
+  }
+  li {
+    display: inline-block;
+    font-size: rem($typeMe);
+    a {
+      color: $cStubbs;
+      text-decoration: none;
+    }
+  }
+}
+
+.navigation {
+  padding: 0px 40px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    li {
+      font-size: rem($typeXXL);
+      display: block;
+      body.js-hiraku-offcanvas-body-right & {
+        animation-name: anim-slideIn;
+        transition: all ease-out 0.125s;
+        animation-iteration-count: 1;
+        animation-duration: 0.35s;
+      }
+      &:nth-child(2) {
+        body.js-hiraku-offcanvas-body-right & {
+          animation-duration: 0.75s;
+        }
+      }
+      &:nth-child(3) {
+        body.js-hiraku-offcanvas-body-right & {
+          animation-duration: 1s;
+        }
+      }
+      a {
+        color: $cHeading;
+        font-weight: $fontMedium;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        @include link-active-styles {
+          border-bottom-color: $cAction;
+        }
+      }
+      &.minor {
+        font-size: rem($typeS);
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        svg {
+          fill: $cText;
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          position: relative;
+        }
+        svg.icon_linkedin_svg {
+          top: -2px;
+          margin-left: 2px;
+        }
+        svg.icon_twitter_svg {
+          top: -1px;
+          fill: lighten($cText, 8%);
+        }
+        a {
+          color: $cText;
+          border-width: 0;
+          @include link-active-styles {
+            border-width: 0;
+            svg {
+              fill: $cAction;
+            }
+          }
+          + a {
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}

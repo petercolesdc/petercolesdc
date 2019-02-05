@@ -47,3 +47,31 @@
   font-style: italic;
   font-weight: 700;
   src: local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Tahoma Bold"); }
+
+// Averta
+@font-face {
+  font-family: 'Averta';
+  font-style: normal;
+  font-weight: $fontNormal;
+  src: local('Averta'), local('Averta-Regular'),
+       url('/assets/fonts/averta/averta-regular-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/assets/fonts/averta/averta-regular-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Averta';
+  font-style: normal;
+  font-weight: $fontMedium;
+  src: local('Averta Medium'), local('Averta-Medium'),
+       url('/assets/fonts/averta/averta-semibold-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/assets/fonts/averta/averta-semibold-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Averta';
+  font-style: normal;
+  font-weight: $fontBold;
+  src: local('Averta Bold'), local('Averta-Bold'),
+       url('/assets/fonts/averta/averta-bold-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/assets/fonts/averta/averta-bold-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

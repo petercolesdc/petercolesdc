@@ -1,4 +1,53 @@
 
+// Menu slide in
+@-webkit-keyframes anim-slideIn {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes anim-slideIn {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes anim-colorBlend {
+  0% {
+    fill: $cAbernathy;
+  }
+  25% {
+    fill: $cFord;
+  }
+  50% {
+    fill: $cLowe;
+  }
+  75% {
+    fill: $cDelos;
+  }
+}
+
+@keyframes anim-colorBlend {
+  0% {
+    fill: $cAbernathy;
+  }
+  25% {
+    fill: $cFord;
+  }
+  50% {
+    fill: $cLowe;
+  }
+  75% {
+    fill: $cDelos;
+  }
+}
+
 // Icons pop
 @-webkit-keyframes hvr-icon-pop {
   50% {
@@ -52,6 +101,7 @@
     transform: scale(1) translateX(3px) translateY(3px);
   }
 }
+
 @keyframes hvr-ripple-out-circle {
   0% {
     opacity: 1;

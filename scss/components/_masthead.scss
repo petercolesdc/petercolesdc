@@ -1,0 +1,60 @@
+
+.masthead {
+  position: relative;
+  padding: 8em 0;
+  overflow: hidden;
+  background-color: $cSizemore;
+  @include shadowSubtle;
+  @include respond-to($vpMenu) {
+    padding: 10em 0;
+  }
+  &_profile {
+    display: block;
+    width: 280px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+    border-radius: 6px;
+    @include shadowSubtle;
+    position: relative;
+    z-index: 3;
+  }
+  &_profile__edge1,
+  &_profile__edge2 {
+    background-color: #fff;
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 70px;
+    display: block;
+    @include shadowSubtle;
+    border-radius: 3px;
+    z-index: 0;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  &_profile__edge1 {
+    left: -6%;
+  }
+  &_profile__edge2 {
+    right: -6%;
+  }
+  &_caption {
+    max-width: 580px;
+    text-align: center;
+    position: relative;
+    @extend .row;
+  }
+  &_heading {
+    font-size: rem($typeMasthead);
+    letter-spacing: -0.025em;
+    @extend .heading;
+  }
+  p {
+    font-family: $fontVoice;
+    font-size: rem($typeMe);
+  }
+}

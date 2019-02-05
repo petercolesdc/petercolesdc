@@ -21,7 +21,6 @@
 .typeXXL {
 	@extend %typebaseRoot;
 	@extend %kernTight;
-	@include sharp-text;
 	font-size: rem($typeXXL);
 }
 
@@ -62,7 +61,7 @@
 
 .heading {
 	display: block;
-	font-weight: $fontSemiBold;
+	font-weight: $fontMedium;
 	color: $cHeading;
 	@include sharp-text;
 }
