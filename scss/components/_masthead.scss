@@ -1,12 +1,16 @@
 
 .masthead {
   position: relative;
-  padding: 8em 0;
+  padding: 8em 0 11em 0;
   overflow: hidden;
-  background-color: $cSizemore;
+  background-color: #fff;
+  //background-image: linear-gradient(to bottom, $cSizemore 80%, transparent 100%);
+  border-bottom: $strokeWidth solid $cBorder;
   @include shadowSubtle;
   @include respond-to($vpMenu) {
-    padding: 10em 0;
+    padding: 12em 0 10em 0;
+    border-bottom: 0;
+    box-shadow: none;
   }
   &_profile {
     display: block;
@@ -35,12 +39,21 @@
     background-size: cover;
     background-position: 0 0;
     background-repeat: no-repeat;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
   }
   &_profile__edge1 {
     left: -6%;
+    transform: translateX(0);
+    opacity: 1;
+    animation-name: anim-pictureSlideL;
   }
   &_profile__edge2 {
     right: -6%;
+    transform: translateX(0);
+    opacity: 1;
+    animation-name: anim-pictureSlideR;
   }
   &_caption {
     max-width: 580px;
@@ -50,7 +63,9 @@
   }
   &_heading {
     font-size: rem($typeMasthead);
+    line-height: 1.2;
     letter-spacing: -0.025em;
+    margin-bottom: 0.3em;
     @extend .heading;
   }
   p {

@@ -1,14 +1,5 @@
 
 // Menu slide in
-@-webkit-keyframes anim-slideIn {
-  0% {
-    transform: translateX(30%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 @keyframes anim-slideIn {
   0% {
     transform: translateX(30%);
@@ -18,43 +9,54 @@
   }
 }
 
-@-webkit-keyframes anim-colorBlend {
-  0% {
-    fill: $cAbernathy;
-  }
-  25% {
-    fill: $cFord;
-  }
-  50% {
-    fill: $cLowe;
-  }
-  75% {
-    fill: $cDelos;
-  }
-}
-
+// Color blend
 @keyframes anim-colorBlend {
   0% {
     fill: $cAbernathy;
   }
-  25% {
-    fill: $cFord;
+  33% {
+    fill: lighten($cLowe, 25%);
   }
-  50% {
-    fill: $cLowe;
-  }
-  75% {
+  66% {
     fill: $cDelos;
   }
 }
 
-// Icons pop
-@-webkit-keyframes hvr-icon-pop {
-  50% {
-    transform: scale(1.25) translateY(-50%);
+// Picture slide in
+@keyframes anim-pictureSlideL {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
+
+@keyframes anim-pictureSlideR {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// ---------------------------------
+// HOVERS
+// ---------------------------------
+
+// Icons pop
 @keyframes hvr-icon-pop {
   50% {
     transform: scale(1.25) translateY(-50%);
@@ -62,18 +64,6 @@
 }
 
 // Ripples
-@-webkit-keyframes hvr-ripple-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    top: -8px;
-    right: -8px;
-    bottom: -8px;
-    left: -8px;
-    opacity: 0;
-  }
-}
 @keyframes hvr-ripple-out {
   0% {
     opacity: 1;
@@ -84,35 +74,5 @@
     bottom: -8px;
     left: -8px;
     opacity: 0;
-  }
-}
-
-@-webkit-keyframes hvr-ripple-circle {
-  0% {
-    opacity: 1;
-    transform: scale(1) translateX(3px) translateY(3px);
-  }
-  50% {
-    transform: scale(1.4) translateX(3px) translateY(3px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateX(3px) translateY(3px);
-  }
-}
-
-@keyframes hvr-ripple-out-circle {
-  0% {
-    opacity: 1;
-    transform: scale(1) translateX(3px) translateY(3px);
-  }
-  50% {
-    transform: scale(1.4) translateX(3px) translateY(3px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateX(3px) translateY(3px);
   }
 }

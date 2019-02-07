@@ -12,6 +12,10 @@
     a {
       color: $cStubbs;
       text-decoration: none;
+      transition: color ease-in-out 0.125s;
+      @include link-active-styles {
+        color: $cAction;
+      }
     }
   }
 }

@@ -22,6 +22,7 @@
 	@extend %typebaseRoot;
 	@extend %kernTight;
 	font-size: rem($typeXXL);
+	line-height: 1.2;
 }
 
 .typeXL {

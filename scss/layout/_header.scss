@@ -2,9 +2,9 @@
 .header {
   position: relative;
   background-color: #fff;
-  border-bottom: $strokeWidth solid $cBorder;
-  @include shadowSubtle;
-  padding: 18px 30px;
+  // border-bottom: $strokeWidth solid $cBorder;
+  // @include shadowSubtle;
+  padding: 18px $bufferSpaceS;
   h1 {
     font-size: rem(24);
     color: $cHeading;
@@ -12,6 +12,12 @@
     font-family: $fontVoice;
     letter-spacing: -0.025em;
     font-weight: $fontBold;
+    div[aria-hidden="true"] {
+      display: block;
+    }
+    div[aria-hidden="false"] {
+      display: none;
+    }
     span {
       text-indent: -999em;
       display: block;

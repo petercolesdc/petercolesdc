@@ -11,8 +11,8 @@ body {
   line-height: $lineheightBase;
   overflow-x: hidden;
   @include sharp-text;
-  border: 8px solid $cFlood;
   @include respond-to($vpMenu) {
+    border: 8px solid $cFlood;
     padding-top: 8px;
     border-top: 0;
     border-bottom: 0;
@@ -47,7 +47,8 @@ a,
 .fauxlink {
   text-decoration: underline;
   cursor: pointer;
-  color: $cAction;
+  color: inherit;
+  text-decoration-color: $cAction;
   @include link-active-styles {
     text-decoration-color: darken($cAction, 5%);
   }

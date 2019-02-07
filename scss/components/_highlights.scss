@@ -1,0 +1,144 @@
+
+.highlights {
+  position: relative;
+  padding: 10em 0;
+  overflow: hidden;
+  &_title {
+    @extend .heading;
+    @extend .typeXXL;
+    text-align: center;
+    @include respond-to($vpMenu) {
+      width: 300px;
+      min-width: 300px;
+      text-align: left;
+      margin-bottom: 0.5em;
+    }
+  }
+  header {
+    position: relative;
+    @extend .row;
+    @include respond-to($vpMenu) {
+      display: flex;
+      align-items: center;
+    }
+    p {
+      @extend .typeM;
+      position: relative;
+      z-index: 2;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-top: 2em;
+      margin-bottom: 3em;
+      @include respond-to($vpMenu) {
+        max-width: 600px;
+        background-color: $cSizemore;
+        padding: 6em 0 6em 6em;
+        margin-left: 5em;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        color: $cStubbs;
+      }
+      @include respond-to($vpMenu) {
+        &:before {
+          width: 500px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          content: "";
+          background-color: $cSizemore;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  main {
+    @extend .row;
+    position: relative;
+    @include respond-to($vpMenu) {
+      padding-right: 0;
+      padding-left: 0;
+      max-width: 100%;
+    }
+    @include respond-to($vpE) {
+      max-width: $rowMax + 80px;
+      transform: translateX(40px);
+      padding-left: $bufferSpaceS;
+    }
+    @include respond-to($vpF) {
+      max-width: $rowMax + 200px;
+      transform: translateX(100px);
+    }
+    ol {
+      list-style-type: none;
+      @include respond-to($vpE) {
+        display: flex;
+      }
+      li {
+        overflow: hidden;
+        position: relative;
+        &:after {
+          z-index: 2;
+          content: "";
+          background-image: linear-gradient(to top, rgba($cStubbs, 0.3), rgba($cStubbs, 0.0));
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 80%;
+          width: 100%;
+          display: block;
+        }
+        @include respond-to($vpMenu) {
+          width: 33.33%;
+          float: left;
+          height: 500px;
+          background-color: $cStubbs;
+          &:nth-of-type(2) {
+            background-color: $cFlood;
+          }
+          &:nth-of-type(3) {
+            background-color: $cWeber;
+          }
+        }
+        @include respond-to($vpE) {
+          flex: 1 0 0;
+        }
+      }
+      a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 4em;
+        position: relative;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.highlight {
+  &_caption {
+    max-width: 60%;
+    z-index: 3;
+    position: relative;
+    span {
+      font-size: rem($typeMe);
+      line-height: 1.4;
+      display: block;
+    }
+    @include respond-to($vpMenu) {
+      position: absolute;
+      bottom: 4em;
+      left: 4em;
+    }
+  }
+  &_title {
+    @extend .heading;
+    @extend .typeL;
+    color: #fff;
+  }
+}
