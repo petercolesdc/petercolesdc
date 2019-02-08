@@ -3,6 +3,9 @@
   position: relative;
   padding: 10em 0;
   overflow: hidden;
+  @include respond-to($vpMenu) {
+    padding: 12em 0 14em 0;
+  }
   &_title {
     @extend .heading;
     @extend .typeXXL;
@@ -65,13 +68,13 @@
       max-width: 100%;
     }
     @include respond-to($vpE) {
-      max-width: $rowMax + 80px;
-      transform: translateX(40px);
+      max-width: $rowMax + 90px;
+      left: 45px;
       padding-left: $bufferSpaceS;
     }
     @include respond-to($vpF) {
-      max-width: $rowMax + 200px;
-      transform: translateX(100px);
+      max-width: $rowMax + 150px;
+      left: 75px;
     }
     ol {
       list-style-type: none;
@@ -81,28 +84,18 @@
       li {
         overflow: hidden;
         position: relative;
-        &:after {
-          z-index: 2;
-          content: "";
-          background-image: linear-gradient(to top, rgba($cStubbs, 0.3), rgba($cStubbs, 0.0));
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          height: 80%;
-          width: 100%;
-          display: block;
+        height: 300px;
+        background-color: $cStubbs;
+        &:nth-of-type(2) {
+          background-color: $cFlood;
+        }
+        &:nth-of-type(3) {
+          background-color: $cWeber;
         }
         @include respond-to($vpMenu) {
           width: 33.33%;
           float: left;
           height: 500px;
-          background-color: $cStubbs;
-          &:nth-of-type(2) {
-            background-color: $cFlood;
-          }
-          &:nth-of-type(3) {
-            background-color: $cWeber;
-          }
         }
         @include respond-to($vpE) {
           flex: 1 0 0;
@@ -115,6 +108,7 @@
         padding: 4em;
         position: relative;
         height: 100%;
+        z-index: 3;
       }
     }
   }
@@ -122,23 +116,70 @@
 
 .highlight {
   &_caption {
-    max-width: 60%;
+    max-width: 300px;
     z-index: 3;
     position: relative;
+    position: absolute;
+    bottom: 4em;
+    left: 4em;
+    padding-right: 4em;
     span {
       font-size: rem($typeMe);
       line-height: 1.4;
       display: block;
     }
     @include respond-to($vpMenu) {
-      position: absolute;
-      bottom: 4em;
-      left: 4em;
+
     }
   }
   &_title {
     @extend .heading;
     @extend .typeL;
     color: #fff;
+    margin-bottom: 0.5em;
+  }
+  &_reel {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &:after {
+      z-index: 2;
+      content: "";
+      background-image: linear-gradient(to top, rgba($cStubbs, 0.95) 0%, rgba($cStubbs, 0.55) 66%, rgba($cStubbs, 0.0) 100%);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 80%;
+      width: 100%;
+      display: block;
+    }
+    img {
+      position: absolute;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: auto;
+      transition: opacity ease-out 2s;
+      @include respond-to($vpMenu) {
+        width: auto;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &:hover {
+      img:nth-child(1) {
+        //opacity: 0;
+      }
+      img:nth-child(2) {
+        opacity: 0;
+      }
+    }
   }
 }

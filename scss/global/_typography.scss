@@ -28,11 +28,13 @@
 .typeXL {
 	@extend %typebaseRoot;
 	font-size: rem($typeXL);
+	line-height: 1.2;
 }
 
 .typeL {
 	@extend %typebaseRoot;
 	font-size: rem($typeL);
+	line-height: 1.2;
 }
 
 .typeM {

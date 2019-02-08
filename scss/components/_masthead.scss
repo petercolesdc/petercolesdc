@@ -8,7 +8,7 @@
   border-bottom: $strokeWidth solid $cBorder;
   @include shadowSubtle;
   @include respond-to($vpMenu) {
-    padding: 12em 0 10em 0;
+    padding: 10em 0 10em 0;
     border-bottom: 0;
     box-shadow: none;
   }
@@ -56,7 +56,7 @@
     animation-name: anim-pictureSlideR;
   }
   &_caption {
-    max-width: 580px;
+    max-width: 600px;
     text-align: center;
     position: relative;
     @extend .row;
