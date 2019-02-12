@@ -56,11 +56,6 @@
 			
 			
 		</div>
-		
-			<footer class="footer">
-</footer>
-
-		
 		<nav class="navigation offcanvas-right" id="navigation">
   <button class="hiraku-close-btn" id="offcanvas-btn-close">
     <span class="hiraku-btn-line"></span>
@@ -86,6 +81,14 @@
   </ul>
 </nav>
 
+		
+			<footer class="footer">
+  <div class="row">
+    <p>Stop looking at my feet</p>
+  </div>
+</footer>
+
+		
 	</div>
 </body>
 
@@ -103,11 +106,11 @@ var hiraku = new Hiraku('.offcanvas-right', {
 
 // Animation transitions
 $(document).ready(function() {
-  $(".ui__canvas").animsition({
+  $(".ui__container").animsition({
     inClass: 'fade-in',
-    outClass: 'fade-out-down-lg',
-    inDuration: 600,
-    outDuration: 400,
+    outClass: 'fade-out',
+    inDuration: 2000,
+    outDuration: 6000,
     linkElement: '.animsition_link',
     loading: true,
     loadingParentElement: 'body', //animsition wrapper element
@@ -125,6 +128,7 @@ $(document).ready(function() {
     transition: function(url){ window.location.href = url; }
   });
 });
+
 </script>
 
 

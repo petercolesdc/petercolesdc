@@ -1,4 +1,15 @@
 
 .ui__container {
   min-height: 100vh;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  position: relative;
+}
+
+.ui__canvas {
+  min-height: 100vh;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
 }

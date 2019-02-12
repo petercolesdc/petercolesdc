@@ -51,7 +51,7 @@
 
 
 			
-<section>
+<section class="mhead">
   <div class="masthead">
     <div class="masthead_caption">
       <div class="masthead_profile__edge1" style="background-image: url(/assets/img/meface1.png);"></div>
@@ -66,7 +66,7 @@
   <article>
     <header>
       <h2 class="highlights_title">Featured projects</h2>
-      <p>A few highlights from the last couple of years that I'm proud to had the pleasure of <nobr>working on.</nobr></p>
+      <p>A few highlights from the last couple of years that I'm proud to have had the pleasure of <nobr>working on.</nobr></p>
     </header>
     <main>
       <ol>
@@ -86,7 +86,7 @@
           <a href="">
             <div class="highlight_caption">
               <h3 class="highlight_title">Destination space</h3>
-              <span>Tracking astonaut Tim Peake's mission to <nobr>the ISS.</nobr></span>
+              <span>Tracking astronaut Tim Peake's mission to <nobr>the ISS.</nobr></span>
             </div>
             <div class="highlight_reel">
               <img src="/assets/img/wk_ds_ast1.jpg" alt="Kids playing with electric orb"/>
@@ -110,16 +110,26 @@
     </main>
   </article>
 </section>
+<section class="folks">
+  <div class="row">
+    <h2 class="folks_heading">Folks i've <nobr>worked with</nobr></h2>
+    <ul>
+      <li><img src="/assets/img/logo_phe.jpg" alt="Public Health England logo"/></li>
+      <li><img src="/assets/img/logo_rac.jpg" alt="RAC logo"/></li>
+      <li><img src="/assets/img/logo_nhs.jpg" alt="NHS logo"/></li>
+      <li><img src="/assets/img/logo_uog.jpg" alt="University of Georgia logo"/></li>
+      <li><img src="/assets/img/logo_usa.jpg" alt="UK Space Agency logo"/></li>
+      <li><img src="/assets/img/logo_roland.jpg" alt="Roland logo"/></li>
+      <li><img src="/assets/img/logo_bbc.jpg" alt="BBC logo"/></li>
+      <li><img src="/assets/img/logo_ddn.jpg" alt="DDN logo"/></li>
+    </ul>
+  </div>
+</section>
 
 
 			
 
 		</div>
-		
-			<footer class="footer">
-</footer>
-
-		
 		<nav class="navigation offcanvas-right" id="navigation">
   <button class="hiraku-close-btn" id="offcanvas-btn-close">
     <span class="hiraku-btn-line"></span>
@@ -145,6 +155,14 @@
   </ul>
 </nav>
 
+		
+			<footer class="footer">
+  <div class="row">
+    <p>Stop looking at my feet</p>
+  </div>
+</footer>
+
+		
 	</div>
 </body>
 
@@ -162,11 +180,11 @@ var hiraku = new Hiraku('.offcanvas-right', {
 
 // Animation transitions
 $(document).ready(function() {
-  $(".ui__canvas").animsition({
+  $(".ui__container").animsition({
     inClass: 'fade-in',
-    outClass: 'fade-out-down-lg',
-    inDuration: 600,
-    outDuration: 400,
+    outClass: 'fade-out',
+    inDuration: 2000,
+    outDuration: 6000,
     linkElement: '.animsition_link',
     loading: true,
     loadingParentElement: 'body', //animsition wrapper element
@@ -184,6 +202,7 @@ $(document).ready(function() {
     transition: function(url){ window.location.href = url; }
   });
 });
+
 </script>
 
 

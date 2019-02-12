@@ -1,0 +1,14 @@
+
+.footer {
+	bottom: 0;
+	width: 100%;
+  z-index: 0;
+  background-color: #000;
+  padding: 6em 0;
+  animation-name: utl-offset-footer;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: $cWeber;
+}

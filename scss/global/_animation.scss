@@ -52,6 +52,15 @@
   }
 }
 
+@keyframes utl-offset-footer {
+  0% {
+    position: relative;
+  }
+  100% {
+    position: sticky;
+  }
+}
+
 // ---------------------------------
 // HOVERS
 // ---------------------------------

@@ -1,10 +1,12 @@
 
 .highlights {
   position: relative;
-  padding: 10em 0;
+  padding: 10em 0 0 0;
   overflow: hidden;
+  z-index: 5;
+  background-color: #fff;
   @include respond-to($vpMenu) {
-    padding: 12em 0 14em 0;
+    padding: 12em 0 0 0;
   }
   &_title {
     @extend .heading;
@@ -48,7 +50,7 @@
       @include respond-to($vpMenu) {
         &:before {
           width: 500px;
-          height: 100%;
+          height: 1500px;
           position: absolute;
           top: 0;
           left: 100%;
@@ -86,6 +88,7 @@
         position: relative;
         height: 300px;
         background-color: $cStubbs;
+        @include shadowSubtle;
         &:nth-of-type(2) {
           background-color: $cFlood;
         }
@@ -108,7 +111,7 @@
         padding: 4em;
         position: relative;
         height: 100%;
-        z-index: 3;
+        z-index: 5;
       }
     }
   }

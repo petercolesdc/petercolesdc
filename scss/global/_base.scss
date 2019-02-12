@@ -10,6 +10,7 @@ body {
   font-family: $fontDefault;
   line-height: $lineheightBase;
   overflow-x: hidden;
+  background-color: #fff;
   @include sharp-text;
   @include respond-to($vpMenu) {
     border: 8px solid $cFlood;
